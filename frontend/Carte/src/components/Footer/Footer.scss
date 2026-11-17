@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #242d41;
+  padding: 24px 0 30px;
+  color: #929eb0;
+  font-size: 11px;
+}
+
+.footer > span:first-child {
+  font-family: Georgia, serif;
+  color: #eae9e0;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
