@@ -1,0 +1,35 @@
+:root {
+  font-family: 'Lato', sans-serif;
+  color: #eaf2f5;
+  background: #081B26;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-wrap: anywhere;
+}
+h1, h2, p {
+  margin: 0;
+}
+h1, h2 {
+  font-weight: 400;
+}
+
+// Style partagé par Header et EtapeDetail.
+.eyebrow {
+  color: #eaf2f5;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}

@@ -1,0 +1,46 @@
+.page {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 48px;
+}
+
+.parcours {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 56px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 0 24px;
+  }
+
+  .parcours {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 0 16px;
+  }
+}
+
+.parcours > * {
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+
+  .parcours {
+    gap: 24px;
+    padding-bottom: 32px;
+  }
+}

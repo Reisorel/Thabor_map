@@ -1,0 +1,90 @@
+.lecteur-audio {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #eaf2f52b;
+  color: #eaf2f5;
+
+  .lecteur-audio-titre {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .lecteur-audio-commandes {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .lecteur-audio-bouton {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid #f4d78c80;
+    border-radius: 50%;
+    background: #f4d78c14;
+    color: #f4d78c;
+    cursor: pointer;
+    touch-action: manipulation;
+
+    &:disabled {
+      opacity: .5;
+      cursor: default;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    @media (hover: hover) {
+      &:not(:disabled):hover {
+        background: #f4d78c30;
+      }
+    }
+  }
+
+  .lecteur-audio-progression {
+    flex: 1;
+    min-width: 0;
+
+    input {
+      display: block;
+      width: 100%;
+      min-height: 44px;
+      margin: 0;
+      accent-color: #f4d78c;
+      cursor: pointer;
+
+      &:disabled {
+        cursor: default;
+        opacity: .5;
+      }
+    }
+  }
+
+  .lecteur-audio-temps {
+    font-size: 12px;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+
+  .lecteur-audio-attente,
+  .lecteur-audio-erreur {
+    margin-top: 10px;
+    color: #f4d78c;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  button:focus-visible,
+  input:focus-visible {
+    outline: 2px solid #eaf2f5;
+    outline-offset: 3px;
+  }
+}
