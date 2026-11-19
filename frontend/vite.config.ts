@@ -4,5 +4,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Thabor_map/',
+  base: process.env.GITHUB_ACTIONS === 'true' ? '/Thabor_map/' : '/carte/',
 })
