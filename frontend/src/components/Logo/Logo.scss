@@ -19,7 +19,7 @@
     max-width: none;
     margin: 0 0 12px;
     color: #f4d78c;
-    font-size: clamp(12px, 2vw, 26px);
+    font-size: clamp(10px, 1.5vw, 18px);
     font-weight: 700;
     line-height: 1.4;
     letter-spacing: .2em;
@@ -33,6 +33,18 @@
   h2 {
     margin-top: 24px;
     font-size: 23px;
+  }
+}
+
+@media (max-width: 900px) {
+  .introduction {
+    margin-inline: auto;
+    text-align: center;
+
+    h1 img,
+    p {
+      margin-inline: auto;
+    }
   }
 }
 
