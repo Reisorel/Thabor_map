@@ -4,6 +4,7 @@ import './Logo.scss'
 export function Logo() {
   return (
     <div className="introduction">
+      <p className="introduction__edition">Les Luminéales du Thabor · <span>1ère édition</span></p>
       <h1>
         <img src={titreParcours} alt="Des Noëls dans le monde" width={2942} height={1498} />
       </h1>
