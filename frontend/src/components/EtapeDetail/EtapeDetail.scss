@@ -10,23 +10,32 @@
 }
 
 .etape-detail .etape-contenu h2 {
-  font-size: 34px;
-  line-height: 1.2;
+  font-family: Lato, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 51px;
+  letter-spacing: -0.44px;
+  color: #eaf2f5;
   margin: 18px 0;
 }
 
 .etape-detail .etape-contenu .etape-description {
   white-space: pre-line;
-  color: #fff;
-  font-size: 15px;
-  line-height: 1.9;
+  color: #d3dfe6;
+  font-family: Lato, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
 
   p:first-child {
     color: #f4d78c;
+    border-inline-start: 1px solid currentColor;
+    padding-inline-start: 14px;
   }
 
   p + p {
-    margin-top: 1.9em;
+    margin-top: 1lh;
   }
 }
 
@@ -38,18 +47,8 @@
       padding: 22px 18px 24px;
 
       h2 {
-        font-size: clamp(24px, 6.5vw, 30px);
         margin: 12px 0;
         overflow-wrap: anywhere;
-      }
-
-      .etape-description {
-        font-size: 14px;
-        line-height: 1.75;
-
-        p + p {
-          margin-top: 1.75em;
-        }
       }
     }
   }
