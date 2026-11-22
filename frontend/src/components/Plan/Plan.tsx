@@ -12,10 +12,6 @@ type PlanProps = {
 export function Plan({ etapes, etapeSelectionnee, onSelection }: PlanProps) {
   return (
     <section className="carte-section" aria-labelledby="carte-titre">
-      <div className="section-entete">
-        <h2 id="carte-titre">Le parcours</h2>
-        <span>10 étapes à découvrir</span>
-      </div>
       <div className="carte">
         <img
           src={carteThabor}
@@ -33,7 +29,6 @@ export function Plan({ etapes, etapeSelectionnee, onSelection }: PlanProps) {
           />
         ))}
       </div>
-      <p className="legende">Sélectionnez un point pour découvrir son histoire.</p>
       <label className="choix-etape">
         Ou choisissez une étape
         <select

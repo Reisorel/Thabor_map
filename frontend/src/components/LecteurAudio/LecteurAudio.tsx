@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './LecteurAudio.scss'
 
+const artiste = 'Birds on Wire'
+
 type LecteurAudioProps = {
   src?: string
   titre: string
@@ -17,6 +19,7 @@ export function LecteurAudio({ src, titre }: LecteurAudioProps) {
   const [temps, setTemps] = useState(0)
   const [duree, setDuree] = useState(0)
   const [erreur, setErreur] = useState<string | null>(null)
+  const credit = `« ${titre} » par ${artiste}`
 
   useEffect(() => {
     const audio = audioRef.current
@@ -42,8 +45,8 @@ export function LecteurAudio({ src, titre }: LecteurAudioProps) {
   }
 
   return (
-    <section className="lecteur-audio" aria-label={`Extrait musical : ${titre}`}>
-      <p className="lecteur-audio-titre">Écoutez l’extrait musical</p>
+    <section className="lecteur-audio" aria-label={`Extrait musical : ${credit}`}>
+      <p className="lecteur-audio-titre">Écoutez l’extrait : {credit}</p>
       {src && <audio
         ref={audioRef}
         src={src}

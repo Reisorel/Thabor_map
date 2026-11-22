@@ -1,46 +1,27 @@
-.introduction {
-  padding: 64px 0 48px;
-  max-width: 760px;
+.entete__repere {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }
 
-.introduction h1 {
-  font-size: clamp(36px, 4.5vw, 64px);
-  line-height: 1.12;
-  margin: 18px 0;
+.entete {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  padding: 10px 0;
+  background: #081b26;
+  border-bottom: 1px solid #242d41;
 }
 
-.introduction > p:last-child {
-  max-width: 610px;
-  color: #eaf2f5;
-  font-size: 15px;
-  line-height: 1.8;
-}
+.entete__logo {
+  display: block;
+  width: clamp(140px, 20vw, 190px);
 
-@media (max-width: 900px) {
-  .introduction {
-    padding-top: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .introduction {
-    padding: 28px 4px 28px;
-
-    .eyebrow {
-      font-size: 10px;
-      line-height: 1.7;
-      letter-spacing: .16em;
-    }
-
-    h1 {
-      font-size: clamp(28px, 8vw, 38px);
-      margin: 12px 0;
-      overflow-wrap: anywhere;
-    }
-
-    > p:last-child {
-      font-size: 14px;
-      line-height: 1.65;
-    }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }

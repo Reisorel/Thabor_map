@@ -1,21 +1,4 @@
 .carte-section {
-  .section-entete {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px;
-    margin-bottom: 20px;
-
-    h2 {
-      font-size: 23px;
-    }
-
-    > span {
-      color: #eaf2f5;
-      font-size: 11px;
-    }
-  }
-
   .carte {
     position: relative;
     container-type: inline-size;
@@ -29,12 +12,6 @@
     display: block;
     width: 100%;
     height: auto;
-  }
-
-  .legende {
-    margin-top: 15px;
-    color: #eaf2f5;
-    font-size: 11px;
   }
 }
 
@@ -73,24 +50,8 @@
 
 @media (max-width: 480px) {
   .carte-section {
-    .section-entete {
-      flex-wrap: wrap;
-      gap: 6px 12px;
-      margin-bottom: 12px;
-
-      h2 {
-        font-size: 21px;
-      }
-    }
-
     .carte {
       border-radius: 20px;
-    }
-
-    .legende {
-      font-size: 12px;
-      line-height: 1.5;
-      margin-top: 10px;
     }
   }
 }
