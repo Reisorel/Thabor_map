@@ -1,7 +1,19 @@
 .page {
-  max-width: 1500px;
+  --largeur-page: 1500px;
+  --marge-page: 48px;
+  isolation: isolate;
+  max-width: var(--largeur-page);
   margin: auto;
-  padding: 0 48px;
+  padding: 0 var(--marge-page);
+}
+
+.page__contenu {
+  position: relative;
+  z-index: 1;
+  background: var(--fond-page);
+  box-shadow: 0 0 0 100vmax var(--fond-page);
+  // Le ciel fixe reste visible dans les marges et s'arrête au bord du footer.
+  clip-path: inset(0 -100vw);
 }
 
 .parcours {
@@ -14,7 +26,7 @@
 
 @media (max-width: 900px) {
   .page {
-    padding: 0 24px;
+    --marge-page: 24px;
   }
 
   .parcours {

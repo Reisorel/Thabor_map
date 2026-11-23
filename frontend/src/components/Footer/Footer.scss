@@ -1,6 +1,16 @@
 .footer {
   border-top: 1px solid #242d41;
   padding: 24px 0 30px;
+  background: var(--fond-page);
+  box-shadow: 0 0 0 100vmax var(--fond-page);
+  clip-path: inset(0 -100vmax);
+}
+
+@media (min-height: 480px) and (prefers-reduced-motion: no-preference) {
+  .footer:not(:focus-within) {
+    position: sticky;
+    bottom: 0;
+  }
 }
 
 .footer__logos {
@@ -24,7 +34,7 @@
 }
 
 .footer__logo--malivern {
-  width: min(35%, 230px);
+  width: min(38%, 250px);
 }
 
 .footer__credit {

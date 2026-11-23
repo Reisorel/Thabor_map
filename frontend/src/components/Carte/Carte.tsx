@@ -5,6 +5,7 @@ import { EtapeDetail } from '../EtapeDetail/EtapeDetail'
 import { Header } from '../Header/Header'
 import { Logo } from '../Logo/Logo'
 import { Footer } from '../Footer/Footer'
+import { CielEtoile } from '../CielEtoile/CielEtoile'
 import './Carte.scss'
 
 export function Carte() {
@@ -16,17 +17,20 @@ export function Carte() {
 
   return (
     <div className="page">
-      <Header />
-      <Logo />
-      <main className="parcours" aria-label="Découvrir le parcours">
-        <Plan
-          etapes={etapes}
-          etapeSelectionnee={selection.etape}
-          numeroSelection={selection.numero}
-          onSelection={selectionnerEtape}
-        />
-        <EtapeDetail etape={selection.etape} />
-      </main>
+      <div className="page__contenu">
+        <CielEtoile />
+        <Header />
+        <Logo />
+        <main className="parcours" aria-label="Découvrir le parcours">
+          <Plan
+            etapes={etapes}
+            etapeSelectionnee={selection.etape}
+            numeroSelection={selection.numero}
+            onSelection={selectionnerEtape}
+          />
+          <EtapeDetail etape={selection.etape} />
+        </main>
+      </div>
       <Footer />
     </div>
   )
