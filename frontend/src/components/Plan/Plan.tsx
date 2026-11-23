@@ -6,10 +6,11 @@ import './Plan.scss'
 type PlanProps = {
   etapes: Etape[]
   etapeSelectionnee: Etape
+  numeroSelection: number
   onSelection: (etape: Etape) => void
 }
 
-export function Plan({ etapes, etapeSelectionnee, onSelection }: PlanProps) {
+export function Plan({ etapes, etapeSelectionnee, numeroSelection, onSelection }: PlanProps) {
   return (
     <section className="carte-section" aria-labelledby="carte-titre">
       <div className="carte">
@@ -25,6 +26,7 @@ export function Plan({ etapes, etapeSelectionnee, onSelection }: PlanProps) {
             key={etape.id}
             etape={etape}
             actif={etape.id === etapeSelectionnee.id}
+            numeroSelection={numeroSelection}
             onSelection={onSelection}
           />
         ))}

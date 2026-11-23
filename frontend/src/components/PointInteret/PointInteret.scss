@@ -2,6 +2,7 @@
   --lueur-couleur: 238, 215, 164;
   --lueur-opacite: .65;
   --lueur-echelle: 1;
+  --diametre-coeur: clamp(12px, 3.5cqw, 26px);
 
   position: absolute;
   transform: translate(-50%, -50%);
@@ -19,7 +20,9 @@
 
   // Le halo déborde visuellement sans agrandir la zone cliquable.
   &::before,
-  &::after {
+  &::after,
+  &__etincelle,
+  &__onde {
     content: '';
     position: absolute;
     left: 50%;
@@ -29,16 +32,43 @@
     pointer-events: none;
   }
 
+  &__etincelle {
+    width: 3px;
+    height: 3px;
+    translate: -50% -50%;
+    transform: none;
+    background: #fff1ce;
+    box-shadow: 0 0 5px 1px rgba(var(--lueur-couleur), .7);
+    opacity: 0;
+
+    @media (prefers-reduced-motion: reduce) {
+      display: none;
+    }
+  }
+
   // Cœur lumineux : la taille du point reste celle choisie précédemment.
   &::before {
     z-index: 1;
-    width: clamp(12px, 3.5cqw, 26px);
-    height: clamp(12px, 3.5cqw, 26px);
+    width: var(--diametre-coeur);
+    height: var(--diametre-coeur);
     background: radial-gradient(circle, #f7f3df 0%, #eee8cb 58%, #e4d7ad 100%);
     box-shadow:
       0 0 5px 2px rgba(var(--lueur-couleur), .65),
       0 0 14px 5px rgba(var(--lueur-couleur), .35);
     transition: filter 220ms ease;
+  }
+
+  &__onde {
+    width: var(--diametre-coeur);
+    height: var(--diametre-coeur);
+    box-sizing: border-box;
+    border: 1px solid rgba(var(--lueur-couleur), .8);
+    box-shadow: 0 0 5px rgba(var(--lueur-couleur), .55);
+    opacity: 0;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: point-interet-onde 2s linear;
+    }
   }
 
   // Dégradé sans contour pour fondre la lumière dans la carte.
@@ -88,5 +118,21 @@
     &::after {
       transition: none;
     }
+  }
+}
+
+@keyframes point-interet-onde {
+  from {
+    opacity: .85;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: .55;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.2);
   }
 }
