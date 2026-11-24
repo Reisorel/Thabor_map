@@ -1,0 +1,78 @@
+.lecteur-audio {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(234, 242, 245, 0.168627451);
+  color: #eaf2f5;
+}
+.lecteur-audio .lecteur-audio-titre {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.lecteur-audio .lecteur-audio-commandes {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.lecteur-audio .lecteur-audio-bouton {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid rgba(244, 215, 140, 0.5019607843);
+  border-radius: 50%;
+  background: rgba(244, 215, 140, 0.0784313725);
+  color: #f4d78c;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.lecteur-audio .lecteur-audio-bouton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.lecteur-audio .lecteur-audio-bouton svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+@media (hover: hover) {
+  .lecteur-audio .lecteur-audio-bouton:not(:disabled):hover {
+    background: rgba(244, 215, 140, 0.1882352941);
+  }
+}
+.lecteur-audio .lecteur-audio-progression {
+  flex: 1;
+  min-width: 0;
+}
+.lecteur-audio .lecteur-audio-progression input {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  accent-color: #f4d78c;
+  cursor: pointer;
+}
+.lecteur-audio .lecteur-audio-progression input:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.lecteur-audio .lecteur-audio-temps {
+  font-size: 12px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.lecteur-audio .lecteur-audio-attente,
+.lecteur-audio .lecteur-audio-erreur {
+  margin-top: 10px;
+  color: #f4d78c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.lecteur-audio button:focus-visible,
+.lecteur-audio input:focus-visible {
+  outline: 2px solid #eaf2f5;
+  outline-offset: 3px;
+}/*# sourceMappingURL=LecteurAudio.css.map */

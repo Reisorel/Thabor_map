@@ -1,0 +1,53 @@
+.page {
+  --largeur-page: 1500px;
+  --marge-page: 48px;
+  isolation: isolate;
+  max-width: var(--largeur-page);
+  margin: auto;
+  padding: 0 var(--marge-page);
+}
+
+.page__contenu {
+  position: relative;
+  z-index: 1;
+  background: var(--fond-page);
+  box-shadow: 0 0 0 100vmax var(--fond-page);
+  clip-path: inset(0 -100vw);
+}
+
+.parcours {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    --marge-page: 24px;
+  }
+  .parcours {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .page {
+    padding: 0 16px;
+  }
+}
+.parcours > * {
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+  .parcours {
+    gap: 24px;
+    padding-bottom: 32px;
+  }
+}/*# sourceMappingURL=Carte.css.map */

@@ -1,0 +1,48 @@
+.carte-section .carte {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  border: 1px solid #243c3c;
+  border-radius: 28px;
+  background: #000;
+}
+.carte-section .carte-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.carte-section .choix-etape {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .carte-section .choix-etape {
+    display: grid;
+    gap: 8px;
+    margin-top: 16px;
+    color: #eaf2f5;
+    font-size: 13px;
+  }
+  .carte-section .choix-etape select {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 10px 12px;
+    border: 1px solid #43545c;
+    border-radius: 10px;
+    background: #102733;
+    color: #eaf2f5;
+    font: inherit;
+    font-size: 16px;
+  }
+  .carte-section .choix-etape select:focus-visible {
+    outline: 2px solid #e8e9e3;
+    outline-offset: 3px;
+  }
+}
+@media (max-width: 480px) {
+  .carte-section .carte {
+    border-radius: 20px;
+  }
+}/*# sourceMappingURL=Plan.css.map */

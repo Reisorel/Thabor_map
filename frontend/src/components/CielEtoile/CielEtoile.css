@@ -1,0 +1,62 @@
+.ciel-etoile {
+  --largeur-contenu: calc(min(100%, var(--largeur-page)) - 2 * var(--marge-page));
+  --bord-gauche: calc((100% - var(--largeur-contenu)) / 2);
+  --bord-droit: calc(100% - var(--bord-gauche));
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(var(--bord-gauche) - 22px), transparent var(--bord-gauche), transparent var(--bord-droit), #000 calc(var(--bord-droit) + 22px));
+          mask-image: linear-gradient(to right, #000 calc(var(--bord-gauche) - 22px), transparent var(--bord-gauche), transparent var(--bord-droit), #000 calc(var(--bord-droit) + 22px));
+}
+@media (min-width: 1024px) {
+  .ciel-etoile {
+    display: block;
+  }
+}
+.ciel-etoile__couche {
+  position: absolute;
+  inset: 0 0 calc(-1 * var(--hauteur-motif));
+  background-size: 263px var(--hauteur-motif);
+}
+.ciel-etoile__couche--lointaine {
+  opacity: 0.72;
+  background-image: radial-gradient(circle at 4% 12%, #eff8fb 0 0.6px, transparent 1.2px), radial-gradient(circle at 12% 61%, #d7b975 0 0.6px, transparent 1.2px), radial-gradient(circle at 24% 89%, #eff8fb 0 0.7px, transparent 1.3px), radial-gradient(circle at 35% 31%, #9fcad8 0 0.5px, transparent 1.1px), radial-gradient(circle at 47% 77%, #eff8fb 0 0.6px, transparent 1.2px), radial-gradient(circle at 57% 17%, #d7b975 0 0.6px, transparent 1.2px), radial-gradient(circle at 67% 48%, #eff8fb 0 0.7px, transparent 1.3px), radial-gradient(circle at 78% 96%, #9fcad8 0 0.6px, transparent 1.2px), radial-gradient(circle at 86% 23%, #eff8fb 0 0.6px, transparent 1.2px), radial-gradient(circle at 97% 68%, #eff8fb 0 0.5px, transparent 1.1px);
+}
+.ciel-etoile__couche--proche {
+  background-size: 307px var(--hauteur-motif);
+  background-image: radial-gradient(circle at 3% 37%, #fff0ca 0 0.9px, rgba(242, 202, 130, 0.3333333333) 1.6px, transparent 5px), radial-gradient(circle at 18% 82%, #eff8fb 0 0.8px, rgba(215, 238, 255, 0.3333333333) 1.6px, transparent 4px), radial-gradient(circle at 34% 9%, #e1f5fc 0 1px, rgba(215, 238, 255, 0.3333333333) 1.8px, transparent 5px), radial-gradient(circle at 53% 55%, #ffe2a6 0 0.8px, rgba(242, 202, 130, 0.3333333333) 1.6px, transparent 4px), radial-gradient(circle at 72% 29%, #eff8fb 0 1px, rgba(215, 238, 255, 0.3333333333) 1.8px, transparent 5px), radial-gradient(circle at 93% 72%, #e1f5fc 0 0.9px, rgba(215, 238, 255, 0.3333333333) 1.6px, transparent 4px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ciel-etoile__couche--proche {
+    animation: scintillement-ciel 7s ease-in-out infinite;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ciel-etoile__couche--lointaine {
+    transform: translate3d(0, var(--etoiles-lointaines-y, 0px), 0);
+    animation: scintillement-ciel-lointain 11s ease-in-out -4s infinite;
+  }
+  .ciel-etoile__couche--proche {
+    transform: translate3d(0, var(--etoiles-proches-y, 0px), 0);
+  }
+}
+
+@keyframes scintillement-ciel {
+  0%, 100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes scintillement-ciel-lointain {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}/*# sourceMappingURL=CielEtoile.css.map */

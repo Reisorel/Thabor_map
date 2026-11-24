@@ -1,0 +1,51 @@
+.etape-detail {
+  border: 1px solid #29334d;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #081B26;
+}
+
+.etape-detail .etape-contenu {
+  padding: 36px;
+}
+
+.etape-detail .etape-contenu h2 {
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 51px;
+  letter-spacing: -0.44px;
+  color: #eaf2f5;
+  margin: 18px 0;
+}
+
+.etape-detail .etape-contenu .etape-description {
+  white-space: pre-line;
+  color: #d3dfe6;
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+.etape-detail .etape-contenu .etape-description p:first-child {
+  color: #f4d78c;
+  border-inline-start: 1px solid currentColor;
+  padding-inline-start: 14px;
+}
+.etape-detail .etape-contenu .etape-description p + p {
+  margin-top: 1lh;
+}
+
+@media (max-width: 480px) {
+  .etape-detail {
+    border-radius: 20px;
+  }
+  .etape-detail .etape-contenu {
+    padding: 22px 18px 24px;
+  }
+  .etape-detail .etape-contenu h2 {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+  }
+}/*# sourceMappingURL=EtapeDetail.css.map */

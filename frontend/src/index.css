@@ -1,0 +1,39 @@
+:root {
+  font-family: "Lato", sans-serif;
+  color: #eaf2f5;
+  --fond-page: #081b26;
+  background: var(--fond-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-wrap: anywhere;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+.eyebrow {
+  color: #eaf2f5;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}/*# sourceMappingURL=index.css.map */

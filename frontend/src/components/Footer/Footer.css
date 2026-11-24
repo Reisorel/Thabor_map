@@ -1,0 +1,52 @@
+.footer {
+  border-top: 1px solid #242d41;
+  padding: 24px 0 30px;
+  background: var(--fond-page);
+  box-shadow: 0 0 0 100vmax var(--fond-page);
+  clip-path: inset(0 -100vmax);
+}
+
+@media (min-height: 480px) and (prefers-reduced-motion: no-preference) {
+  .footer:not(:focus-within) {
+    position: sticky;
+    bottom: 0;
+  }
+}
+.footer__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 32px);
+}
+
+.footer__logos img {
+  display: block;
+  height: auto;
+}
+
+.footer__logo--spectaculaires {
+  width: min(63%, 440px);
+}
+.footer__logo--spectaculaires img {
+  width: 100%;
+}
+
+.footer__logo--malivern {
+  width: min(38%, 250px);
+}
+
+.footer__credit {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  text-align: center;
+}
+.footer__credit a {
+  color: inherit;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 4px max(24px, env(safe-area-inset-bottom));
+  }
+}/*# sourceMappingURL=Footer.css.map */
