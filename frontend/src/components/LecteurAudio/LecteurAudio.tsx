@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './LecteurAudio.scss'
 
-const artiste = 'Birds on Wire'
+const artiste = 'Birds on a Wire'
 
 type LecteurAudioProps = {
   src?: string

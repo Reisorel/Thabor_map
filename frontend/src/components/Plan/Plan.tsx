@@ -18,7 +18,7 @@ export function Plan({ etapes, etapeSelectionnee, numeroSelection, onSelection }
           src={carteThabor}
           width={1491}
           height={1055}
-          alt="Vue illustrée du jardin du Thabor, de ses bâtiments, allées et espaces paysagers"
+          alt="Vue illustrée des étapes du parcours lumière du Thabor, de ses bâtiments, allées et espaces paysagers"
           className="carte-image"
         />
         {etapes.map((etape) => (

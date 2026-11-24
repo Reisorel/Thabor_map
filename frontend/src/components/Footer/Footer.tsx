@@ -12,10 +12,10 @@ export function Footer() {
       </div>
       <div className="footer__credit">
         <p>
-          Musique : <a href="https://www.birdsonawiremusic.com/" target="_blank" rel="noopener noreferrer">Birds on Wire</a>
+          Musique : <a href="https://www.birdsonawiremusic.com/" target="_blank" rel="noopener noreferrer">Birds on a Wire</a>
         </p>
         <p>
-          Autrice texte et voix : <a href="https://www.instagram.com/agathe.jeanneau/" target="_blank" rel="noopener noreferrer">Agathe Janneau</a>
+          Autrice texte et voix : <a href="https://www.instagram.com/agathe.jeanneau/" target="_blank" rel="noopener noreferrer">Agathe Jeanneau</a>
         </p>
       </div>
     </footer>
