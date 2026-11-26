@@ -14,27 +14,18 @@
 }
 
 .footer__logos {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 44fr) minmax(0, 25fr) minmax(0, 36fr);
   align-items: center;
-  justify-content: center;
   gap: clamp(12px, 4vw, 32px);
+  max-width: 1114px;
+  margin-inline: auto;
 }
 
 .footer__logos img {
   display: block;
+  width: 100%;
   height: auto;
-}
-
-.footer__logo--spectaculaires {
-  width: min(63%, 440px);
-
-  img {
-    width: 100%;
-  }
-}
-
-.footer__logo--malivern {
-  width: min(38%, 250px);
 }
 
 .footer__credit {
