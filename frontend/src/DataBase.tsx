@@ -1,13 +1,13 @@
 import audioEtape01 from './assets/Audio/01 - Ici - Sous la Neige.mp3'
 import audioEtape02 from './assets/Audio/02 - Colombie.mp3'
-import audioEtape03 from './assets/Audio/03 - Suède.mp3'
+import audioEtape03 from './assets/Audio/03 - Suède.mp3'
 import audioEtape04 from './assets/Audio/04 - Italie.mp3'
 import audioEtape05 from './assets/Audio/05 - Scandinavie.mp3'
 import audioEtape06 from './assets/Audio/06 - Ukraine.mp3'
 import audioEtape07 from './assets/Audio/07 - Inde.mp3'
 import audioEtape08 from './assets/Audio/08 - Mexique.mp3'
 import audioEtape09 from './assets/Audio/09 - Bulles.mp3'
-import audioEtape10 from './assets/Audio/10 - Là-bas - Bonhommes de Neige.mp3'
+import audioEtape10 from './assets/Audio/10 - Là-bas - Bonhommes de Neige.mp3'
 
 
 export type Etape = {
