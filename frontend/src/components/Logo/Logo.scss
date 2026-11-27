@@ -54,8 +54,12 @@
 
     p {
       margin-top: 12px;
-      font-size: 14px;
       line-height: 1.65;
+    }
+
+    p:not(.introduction__edition) {
+      font-size: 10px;
+      text-align: left;
     }
 
     h2 {

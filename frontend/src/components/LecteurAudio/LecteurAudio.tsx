@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import './LecteurAudio.scss'
 
-const artiste = 'Birds on a Wire'
-
 type LecteurAudioProps = {
   src?: string
   titre: string
+  artiste?: string
 }
 
 function formatTemps(secondes: number) {
@@ -13,13 +12,13 @@ function formatTemps(secondes: number) {
   return `${Math.floor(valeur / 60)}:${String(valeur % 60).padStart(2, '0')}`
 }
 
-export function LecteurAudio({ src, titre }: LecteurAudioProps) {
+export function LecteurAudio({ src, titre, artiste }: LecteurAudioProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [enLecture, setEnLecture] = useState(false)
   const [temps, setTemps] = useState(0)
   const [duree, setDuree] = useState(0)
   const [erreur, setErreur] = useState<string | null>(null)
-  const credit = `« ${titre} » par ${artiste}`
+  const credit = artiste ? `« ${titre} » par ${artiste}` : `« ${titre} »`
 
   useEffect(() => {
     const audio = audioRef.current

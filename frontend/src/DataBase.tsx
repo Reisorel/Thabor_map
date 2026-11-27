@@ -1,29 +1,33 @@
-import audioEtape01 from './assets/Audio/01 - Ici - Sous la Neige.mp3'
-import audioEtape02 from './assets/Audio/02 - Colombie.mp3'
-import audioEtape03 from './assets/Audio/03 - Suède.mp3'
-import audioEtape04 from './assets/Audio/04 - Italie.mp3'
-import audioEtape05 from './assets/Audio/05 - Scandinavie.mp3'
-import audioEtape06 from './assets/Audio/06 - Ukraine.mp3'
-import audioEtape07 from './assets/Audio/07 - Inde.mp3'
-import audioEtape08 from './assets/Audio/08 - Mexique.mp3'
-import audioEtape09 from './assets/Audio/09 - Bulles.mp3'
-import audioEtape10 from './assets/Audio/10 - Là-bas - Bonhommes de Neige.mp3'
+import photoSpectaculaires from './assets/Images/Photos_crédits/01_Specta.jpg'
+import photoBirds from './assets/Images/Photos_crédits/02_Birds.png'
+import photoAgathe from './assets/Images/Photos_crédits/03_Agathe.jpg'
+import audioEtape01 from './assets/Audio/01-Ici.mp3'
+import audioEtape02 from './assets/Audio/02-Colombie.mp3'
+import audioEtape03 from './assets/Audio/03-Suède.mp3'
+import audioEtape04 from './assets/Audio/04-Italie.mp3'
+import audioEtape05 from './assets/Audio/05-Scandinavie.mp3'
+import audioEtape06 from './assets/Audio/06-Ukraine.mp3'
+import audioEtape07 from './assets/Audio/07-Inde.mp3'
+import audioEtape08 from './assets/Audio/08-Mexique.mp3'
+import audioEtape09 from './assets/Audio/09-Bulles.mp3'
+import audioEtape10 from './assets/Audio/10-Là_Bas.mp3'
 
 
 export type Etape = {
   id: number
   titre: string
   description: string
+  presentations?: { nom: string; texte: string; photo?: string }[]
   // Importer un MP3 depuis assets, puis l’associer ici à une étape.
   audio?: string
   titreExtrait: string
   position: { x: number; y: number }
 }
 
-// Positions au centre des numéros de Carte_Thabor.png,
+// Positions des points sur la carte nocturne,
 // en pourcentage de la largeur (x) et de la hauteur (y) de l’image.
 export const etapes: Etape[] = [
-  { id: 1, audio: audioEtape01, titreExtrait: 'Douce nuit', titre: 'Ici - Sous la Neige', description: "Bienvenue Toutes les histoires commencent quelque part. Certaines des plus connues naissent à la faveur de la nuit. Auprès d’une lumière, pour se sentir rassuré.es. Autour d’une chanson, pour nous sentir ensemble.\n\nLe voyage que vous vous apprêtez à commencer vous conduira en Colombie, Suède, Italie, Scandinavie, Ukraine, Inde, Mexique et s’achèvera là-bas. A chaque étape, grâce aux lumières et chants, vous pourrez découvrir l’une des traditions de Noël de ce pays.\n\nNotre histoire commence Ici, au coeur d’une nuit d’hiver, sous une neige à gros flocons. Les lanternes guident nos pas. Et une mélodie très familière nous enveloppe.\n\nEn 1818, dans l’obscurité infinie des jours et des nuits sans lumière due à une éruption volcanique lointaine, un prêtre et un instituteur autrichiens se sont retrouvés pour écrire paroles et mélodies. Leur chanson avait pour titre : « Douce nuit ». Pour que toutes et tous autour d’eux ne perdent pas espoir. Presque 100 ans plus tard, le 24 décembre 1914, le long du front belge près d'Ypres, quelques soldats allemands allument des bougies et entonnent « Douce nuit » ; le chant est repris par des combattants anglais et une Trêve de Noël s'instaure, pour une journée.\n\nPeu importe en quelle langue cet air est chanté, la magie s’accomplit. Ici, Dom La Nena & Rosemary Standley vous offrent une version en langue bretonne.", position: { x: 16.57, y: 25.59 } },
+  { id: 1, audio: audioEtape01, titreExtrait: 'Douce nuit - traduit en breton', titre: 'Ici', description: "Bienvenue Toutes les histoires commencent quelque part. Certaines des plus connues naissent à la faveur de la nuit. Auprès d’une lumière, pour se sentir rassuré.es. Autour d’une chanson, pour nous sentir ensemble.\n\nLe voyage que vous vous apprêtez à commencer vous conduira en Colombie, Suède, Italie, Scandinavie, Ukraine, Inde, Mexique et s’achèvera là-bas. A chaque étape, grâce aux lumières et chants, vous pourrez découvrir l’une des traditions de Noël de ce pays.\n\nNotre histoire commence Ici, au coeur d’une nuit d’hiver, sous une neige à gros flocons. Les lanternes guident nos pas. Et une mélodie très familière nous enveloppe.\n\nEn 1818, dans l’obscurité infinie des jours et des nuits sans lumière due à une éruption volcanique lointaine, un prêtre et un instituteur autrichiens se sont retrouvés pour écrire paroles et mélodies. Leur chanson avait pour titre : « Douce nuit ». Pour que toutes et tous autour d’eux ne perdent pas espoir. Presque 100 ans plus tard, le 24 décembre 1914, le long du front belge près d'Ypres, quelques soldats allemands allument des bougies et entonnent « Douce nuit » ; le chant est repris par des combattants anglais et une Trêve de Noël s'instaure, pour une journée.\n\nPeu importe en quelle langue cet air est chanté, la magie s’accomplit. Ici, Dom La Nena & Rosemary Standley vous offrent une version en langue bretonne.", position: { x: 16.57, y: 25.59 } },
   { id: 2, audio: audioEtape02, titreExtrait: 'Navidad que vuelve', titre: 'Colombie', description: "La nuit du 7 décembre, les Colombien.nes allument de petites bougies, Velitas, afin d’illuminer les rues, parcs, lieux publics et leurs maisons. A l’origine, ces bougies servaient à guider la Vierge Marie au coeur de chaque foyer afin qu’elle puisse bénir chaque famille.\n\nChaque bougie allumée est accompagnée d’un souhait. Plus elle brûle longtemps, plus il a de chance de se réaliser. Les familles se promènent ensuite à la nuit tombée dans ce dédale de lumières.\n\nCette tradition marque, depuis 1854, le lancement des festivités de Noël en Colombie.\n\nSi vous le désirez, choisissez des yeux votre Velitas. Laissez sa douceur vous envelopper, baignez-vous dans l’humeur joyeuse de « Navidad que vuelve », Et faites un voeu pour celles et ceux qui, comme dit la chanson, préfèreraient que Noël n’arrive jamais.\n\nQui sait, peut-être qu’il réconfortera un petit coeur lointain ?", position: { x: 34.14, y: 54.6 } },
   { id: 3, audio: audioEtape03, titreExtrait: 'Jupolska', titre: 'Suède', description: "Tenez-vous prêt.es. Elle va bientôt faire son apparition. De blanc vêtue, coiffée de sa couronne de bougies allumées. La voyez-vous ? L’avez-vous vue ? Suivez les lueurs, Sainte-Lucie est toute proche.\n\nDepuis le 4ème siècle en Suède, sa procession apporte vivres et réconforts chaque 13 décembre.. Dans cette nuit la plus longue de l’hiver suédois d’après le calendrier orthodoxe, Sainte-Lucie, accompagnée de ses demoiselles et garçons d’honneur, fait obstacle aux esprits malveillants. Les plus jeunes enfants eux sont en tenue de lutins. Choeur harmonieux sous une lumière douce, les chants de cette fête invitent à danser autour du sapin avant l’arrivée du Père Noël.\n\nLa Sainte-Lucie est la fête, de la lumière, des chants et…des gourmandises. Cette fête chrétienne rend hommage au martyr de Lucie de Syracuse qui apportait des vivres aux chrétiens cachés dans les catacombes romaines. Si vous avez du porridge, du jambon ou du pain d’épices dans votre sac, cela peut être le moment idéal de vous en substanter.\n\nVous pouvez continuer votre voyage tranquille maintenant. « Jupolska » et sa voix de crystal vous protège.", position: { x: 44.67, y: 63.7 } },
   { id: 4, audio: audioEtape04, titreExtrait: 'La Befana', titre: 'Italie', description: "Pleine lune, pleine d’envie. Avez-vous remarqué que la lune est la complice de tant d’histoires ? Lumineuse et souriante, elle nous guide par ses reflets et nous offre chaque mois de nouveaux possibles.\n\nMais quelle est cette ombre qui transperce le ciel devant notre disque d’argent ? Vous voici en Italie, une nuit de pleine lune, sur les terres de la Befana.\n\nNe vous fiez pas à ses chaussures abîmées. La Befana est une sorcière au grand coeur. Protectrice, elle veille sur les enfants italiens depuis des siècles.\n\nLes Rois Mages lui avaient proposé de les accompagner jusqu’à Bethléem. Elle refusa, trop de travail à la maison, comprenez-là, et regretta aussitôt. La Befana tenta de les rattraper, perchée sur son balai, en vain.\n\nEn chemin, elle offrit à chaque enfant sucreries et friandises. Depuis, chaque nuit du 5 janvier, cette femme souriante, généreuse, un peu sévère, mais toujours juste, distribue des cadeaux aux enfants sages…ou du charbon pour les autres, c’est selon.\n\n« La Befana » vient la nuit, avec son chapeau à la romaine, et les enfants sont en fête !", position: { x: 33.47, y: 70.33 } },
@@ -33,4 +37,28 @@ export const etapes: Etape[] = [
   { id: 8, audio: audioEtape08, titreExtrait: 'Los peces en el rio', titre: 'Mexique', description: "Au Mexique, les célébrations de fin d’année s’étendent du 12 décembre au 6 janvier. Là-bas, pas de Père Noël, c’est l’Enfant Jésus en personne qui distribue les cadeaux.\n\nVous connaissez déjà sûrement les piñatas ? Les traditionnelles ont la forme d’une étoile. Elles réjouissent les enfants mexicains le 24 décembre. La piñata invite les mexicains à lutter contre le diable en sauvant la Terre et ses richesses (la boule centrale) des sept péchés capitaux (les picots colorés). Il s’agit de ne pas céder à la tentation et de se laisser guider par sa foi, les yeux bandés, pour briser la sphère et ainsi vaincre le mal. Les bonbons et gourmandises qui en pleuvent récompensent et redonnent espoir.\n\n« Los peces en el rio » est l’un des chants espagnol et sud américain traditionnels de Noël. Une vierge aux cheveux d’or et au peigne d’argent lave les langes du Christ dans la rivière pendant que les poissons boivent et boivent l’eau de la rivière.\n\nÀ son écoute, laissez-vous bercer par la grâce enfantine de la nativité. Mais ne cherchez pas de bâton, vous ne trouverez nulles sucreries dans ces piñatas.", position: { x: 80.48, y: 33.55 } },
   { id: 9, audio: audioEtape09, titreExtrait: 'Brindisi', titre: 'Bulles', description: "Et nous, les adultes, n’avons-nous pas droit également à quelques plaisirs pendant les Fêtes ? Bien sûr que si voyons !\n\nNous avons la joie qui pétille telles les bulles du champagne tout juste versé dans nos coupes.\n\nNous avons l’amour brillant du fond des yeux, comme rempart à la folie du monde autour.\n\nNous avons la folie de vivre l’extase juste avant les premières lueurs du nouveau jour.\n\nNous avons la magie de croire que ces boules irisées embellissent la vie.\n\nNous avons la malice de chanter à pleine voix un air familier d’opéra, et tant pis si c’est un peu faux. Un air de « La Traviata » n’attend plus que vous.", position: { x: 67.81, y: 28.53 } },
   { id: 10, audio: audioEtape10, titreExtrait: 'Cold winter', titre: 'Là-bas - Bonhommes de Neige', description: "Vous voici arrivés là-bas, à la dernière étape de votre voyage. Là-bas c’est ici. Un Ici où tout semble possible. Un Là où l’on accepte l’autre. Où le « cold winter », le froid de l’hiver, nous invite à laisser de côté rancunes et colères.\n\nUn Ici où il s’agit de profiter encore. De danser sous les mille lueurs de ces bonhommes de neige facétieux, que vous soyiez petits ou grands, d’ici ou d’ailleurs, et d’être ensemble.\n\nDe tous temps, de tous lieux, les célébrations de Noël, vous l’avez traversé, créent du collectif. Se retrouver en famille ou entre inconnu.e.s pour rêver à de meilleurs possibles.\n\nFaire humanité, en lumières et en chansons, pour préserver la douce chaleur de l’espoir.\n\nNous vous souhaitons de magiques fêtes de Noël.", position: { x: 46.21, y: 25.4 } },
+  {
+    id: 11,
+    titre: 'Crédits',
+    description: 'Des Noëls dans le monde est une production à la croisée de plusieurs univers artistiques.\n\nLe parcours artistique est signé Spectaculaires, la mise en musique est réalisée par Birds on a Wire, les textes sont écrits par la plume d’Agathe Jeanneau.',
+    presentations: [
+      {
+        nom: 'Spectaculaires',
+        photo: photoSpectaculaires,
+        texte: 'Depuis 1987, Spectaculaires œuvre dans le champ des spectacles de lumière, sous la forme de projections vidéo monumentales ou de parcours lumineux. Acteurs bretons d’envergure nationale (et même mondiale !), les Allumeurs d’images égrènent leur magie pour révéler, à la tombée de la nuit, les monuments et sites remarquables.',
+      },
+      {
+        nom: 'Birds on a Wire',
+        photo: photoBirds,
+        texte: 'Formé en 2012, le duo musical réunit Rosemary Standley, chanteuse de Moriarty, et Dom La Nena, chanteuse et violoncelliste brésilienne. À deux voix et au violoncelle, elles ont composé et interprété la musique qui vous guide tout au long du parcours.',
+      },
+      {
+        nom: 'Agathe Jeanneau',
+        photo: photoAgathe,
+        texte: 'Comédienne et autrice, elle travaille autour de la lecture à voix haute et écrit des textes qu’elle interprète sur scène, parfois accompagnée de musiciens. Elle collabore régulièrement à l’écriture des spectacles de Spectaculaires et prête sa voix à ce parcours.',
+      },
+    ],
+    titreExtrait: '',
+    position: { x: 34.1, y: 14.6 },
+  },
 ]

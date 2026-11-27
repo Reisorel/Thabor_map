@@ -1,4 +1,4 @@
-import carteThabor from '../../assets/Carte_Thabor/Carte_Thabor.png'
+import carteThabor from '../../assets/Carte_Thabor/Carte_nocturne_V2.jpg'
 import { PointInteret } from '../PointInteret/PointInteret'
 import type { Etape } from '../../DataBase'
 import './Plan.scss'

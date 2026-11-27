@@ -1,3 +1,4 @@
+import aimMotionLogo from '../../assets/Logos/Logo_AIM_MOTION_Specta_White.png'
 import malivernLogo from '../../assets/Logos/Malivern_Blanc_Transparent.png'
 import manufactoryLogo from '../../assets/Logos/Manufactory-blanc.png'
 import spectaculairesLogo from '../../assets/Logos/Logo_Specta_Fond_Transparent_Plan de travail 1.png'
@@ -11,6 +12,9 @@ export function Footer() {
         </a>
         <img src={malivernLogo} alt="Malivern" width={1254} height={1254} />
         <img src={manufactoryLogo} alt="Manufactory" width={2330} height={826} />
+        <a href="https://aimmotion.fr/" target="_blank" rel="noopener noreferrer">
+          <img src={aimMotionLogo} alt="AIM Motion" width={2172} height={724} />
+        </a>
       </div>
       <div className="footer__credit">
         <p>

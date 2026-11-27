@@ -9,6 +9,50 @@
   padding: 36px;
 }
 
+.etape-navigation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #f4d78c;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background: rgb(244 215 140 / 12%);
+    }
+
+    &:focus-visible {
+      outline: 1px solid currentColor;
+    }
+
+    &:disabled {
+      opacity: .35;
+      cursor: default;
+    }
+
+    span {
+      width: 8px;
+      height: 8px;
+      border-block-start: 1.5px solid currentColor;
+      border-inline-end: 1.5px solid currentColor;
+      transform: rotate(45deg);
+    }
+
+    &:first-child span {
+      transform: rotate(-135deg);
+    }
+  }
+}
+
 .etape-detail .etape-contenu h2 {
   font-family: Lato, 'Helvetica Neue', Arial, sans-serif;
   font-size: 44px;
@@ -37,9 +81,60 @@
   p + p {
     margin-top: 1lh;
   }
+
+  &--credits {
+    color: #f4d78c;
+    border-inline-start: 1px solid currentColor;
+    padding-inline-start: 14px;
+
+    p:first-child {
+      border-inline-start: 0;
+      padding-inline-start: 0;
+    }
+  }
+}
+
+.etape-presentations {
+  display: grid;
+  gap: 24px;
+  margin-top: 24px;
+  color: #d3dfe6;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.etape-presentation {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  img {
+    display: block;
+    width: clamp(64px, 14vw, 100px);
+    height: auto;
+    flex: none;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 901px) {
+  .etape-presentation img {
+    width: clamp(104px, 9vw, 124px);
+  }
 }
 
 @media (max-width: 480px) {
+  .etape-presentation {
+    flex-direction: column;
+    gap: 12px;
+
+    img {
+      align-self: center;
+      width: clamp(96px, 30vw, 132px);
+      max-width: 100%;
+    }
+  }
+
   .etape-detail {
     border-radius: 20px;
 

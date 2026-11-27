@@ -28,7 +28,7 @@ export function Carte() {
             numeroSelection={selection.numero}
             onSelection={selectionnerEtape}
           />
-          <EtapeDetail etape={selection.etape} />
+          <EtapeDetail etape={selection.etape} onSelection={selectionnerEtape} />
         </main>
       </div>
       <Footer />
