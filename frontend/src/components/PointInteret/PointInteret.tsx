@@ -98,6 +98,7 @@ export function PointInteret({ etape, actif, numeroSelection, onSelection }: Poi
       onClick={() => onSelection(etape)}
     >
       <Etincelles />
+      <span className="point-interet__numero" aria-hidden="true">{etape.id}</span>
       {actif && numeroSelection > 0 && (
         <span key={numeroSelection} className="point-interet__onde" aria-hidden="true" />
       )}
